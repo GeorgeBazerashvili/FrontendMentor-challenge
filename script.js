@@ -2,6 +2,9 @@ let carousel = document.getElementById("carousel");
 let whatever = document.getElementById("switch");
 let controllers = document.querySelectorAll(".controller");
 let cards = document.querySelectorAll(".card");
+const hamburger = document.getElementById("hamburger");
+const illustration = document.getElementById("illustration");
+const navigation = document.getElementById("dropdown-list");
 
 let currentCardIndex = 0;
 let currentController = controllers[currentCardIndex];
@@ -23,3 +26,16 @@ controllers.forEach((item) => {
 });
 
 console.log(carousel.childNodes);
+
+hamburger.onclick = () => {
+  illustration.classList.toggle("hide");
+  navigation.classList.toggle("show");
+};
+
+window.addEventListener("resize", () => {
+  const x = window.innerWidth;
+  if (x >= 900) {
+    illustration.classList.remove("hide");
+    navigation.classList.remove("show");
+  }
+});

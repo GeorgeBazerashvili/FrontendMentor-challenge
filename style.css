@@ -30,16 +30,6 @@
   --fs-button: var(--fs-300);
 }
 
-@media (min-width: 768px) {
-  :root {
-    --fs-primary-heading: var(--fs-900);
-    --fs-secondary-heading: var(--fs-800);
-
-    --fs-body: var(--fs-500);
-    --fs-nav: var(--fs-300);
-  }
-}
-
 /* Resets */
 
 *,
@@ -176,6 +166,10 @@ h3 {
   background: #dd6c4a;
 }
 
+.hide {
+  display: none;
+}
+
 /* Styling */
 
 .container {
@@ -219,6 +213,8 @@ h3 {
 
 .left-side {
   order: 2;
+  width: min(100%, 600px);
+  margin-inline: auto;
 }
 
 footer {
@@ -245,8 +241,9 @@ footer {
 .numbered-list {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: min(100%, 800px);
   margin-top: 4rem;
+  margin-inline: auto;
   background: #fef0e9;
   line-height: 2;
 }
@@ -284,7 +281,7 @@ footer {
 }
 
 .card {
-  width: min(90%);
+  width: min(90%, 600px);
   margin-inline: auto;
   margin-top: 2rem;
   position: relative;
@@ -356,6 +353,8 @@ footer {
 .last-container > div > form > .form {
   order: 1;
   display: flex;
+  width: min(100%, 500px);
+  margin-inline: auto;
   gap: 0.5rem;
 }
 
@@ -374,6 +373,7 @@ footer {
 .last-container > nav > ul {
   display: flex;
   justify-content: space-between;
+  width: min(80%, 400px);
 }
 
 .last-container > nav {
@@ -402,6 +402,8 @@ footer {
   order: 4;
   display: flex;
   flex-direction: column-reverse;
+  width: min(95%, 600px);
+  margin-inline: auto;
 }
 
 .icons-container {
@@ -427,4 +429,67 @@ footer {
   order: 5;
   text-align: center;
   color: #74757a;
+}
+
+.dropdown-list {
+  display: none;
+  width: min(90%, 550px);
+  text-align: center;
+  line-height: 2.5;
+  padding: 2em 0;
+  font-weight: var(--fw-bold);
+  color: #2d3447;
+  background: white;
+  margin-inline: auto;
+  box-shadow: 0.5px 0.5px 8px rgb(51, 49, 49);
+}
+
+@media (min-width: 900px) {
+  :root {
+    --fs-primary-heading: var(--fs-900);
+    --fs-secondary-heading: var(--fs-800);
+
+    --fs-body: var(--fs-500);
+    --fs-nav: var(--fs-300);
+  }
+
+  .primary-nav,
+  .primary-nav > ul,
+  .get-started {
+    display: flex;
+  }
+
+  .primary-nav > ul {
+    gap: 1rem;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .left-side {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+  }
+
+  .left-side > div > h1 {
+    line-height: 1.2;
+    margin-bottom: 0.5em;
+  }
+
+  .left-side > div > p {
+    max-width: 70%;
+  }
+
+  .right-side {
+    order: 2;
+  }
+
+  .order-container {
+    display: flex;
+    flex-direction: row;
+  }
 }
