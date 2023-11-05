@@ -444,7 +444,7 @@ footer {
   box-shadow: 0.5px 0.5px 8px rgb(51, 49, 49);
 }
 
-.dropdown-list > a {
+.dropdown-list > li > a {
   color: #2d3447;
 }
 
