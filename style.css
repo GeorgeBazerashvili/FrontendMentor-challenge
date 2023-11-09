@@ -209,6 +209,9 @@ h3 {
 .right-side {
   order: 1;
   margin-inline: auto;
+  width: min(100%, 650px);
+  display: flex;
+  justify-content: center;
 }
 
 .left-side {
@@ -448,6 +451,10 @@ footer {
   color: #2d3447;
 }
 
+.li-cont > i {
+  display: none;
+}
+
 @media (min-width: 900px) {
   :root {
     --fs-primary-heading: var(--fs-900);
@@ -499,5 +506,77 @@ footer {
   .order-container {
     display: flex;
     flex-direction: row;
+  }
+
+  .container {
+    display: flex;
+  }
+
+  .header-inner {
+    width: 100%;
+  }
+
+  .left-side {
+    flex-basis: 50%;
+  }
+
+  .left-side p {
+    max-width: 75%;
+  }
+
+  .right-side {
+    flex-basis: 45%;
+  }
+
+  .numbered-list {
+    margin: 0;
+  }
+
+  .row-straighner {
+    background-color: white;
+  }
+
+  .row-straighner .number {
+    display: none;
+  }
+
+  .li-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    background: white;
+  }
+
+  .li-cont p {
+    margin-block: 1em 2em;
+  }
+
+  .li-cont i {
+    display: block;
+  }
+
+  .uniter {
+    margin-left: 1rem;
+  }
+
+  .switch {
+    display: none;
+  }
+
+  .carousel {
+    display: flex;
+  }
+
+  .carousel div {
+    display: block;
+    flex-basis: 30%;
+  }
+
+  .down-section h2 {
+    margin-top: 2rem;
+  }
+
+  .down-section button {
+    margin-top: 2rem;
   }
 }
