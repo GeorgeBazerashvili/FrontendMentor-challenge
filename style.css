@@ -167,18 +167,35 @@ h3 {
 }
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 /* Styling */
 
 .container {
-  --max-width: 1110px;
+  --max-width: 1200px;
   --padding: 2rem;
 
   width: min(var(--max-width), 100%);
   margin-inline: auto;
   padding: var(--padding);
+}
+
+@media (min-width: 1600px) {
+  .container {
+    --max-width: 1300px;
+  }
+}
+
+@media (min-width: 1800px) {
+  .container {
+    --max-width: 1500px;
+  }
+
+  .bottom-div {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 
 .primary-nav,
@@ -190,6 +207,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 
 .order-container {
@@ -331,6 +349,8 @@ footer {
   margin-inline: auto;
   text-align: center;
   padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .bottom-div > div > .inverted {
@@ -578,5 +598,74 @@ footer {
 
   .down-section button {
     margin-top: 2rem;
+  }
+
+  .bottom-div {
+    flex-direction: row;
+    justify-content: space-between;
+    width: min(100%, 1000px);
+  }
+
+  .limiter {
+    width: min(50%, 50rem);
+    text-align: start;
+  }
+
+  .lowest-section * {
+    order: 1 !important;
+  }
+
+  .last-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bottom-icons-cont {
+    flex-basis: 20%;
+    flex-direction: column;
+  }
+
+  .bottom-icons-cont > img {
+    margin-bottom: 6rem;
+  }
+
+  .last-container > nav {
+    flex-basis: 40%;
+    align-items: start;
+    padding-inline: 3rem;
+  }
+
+  .icons-container * {
+    transform: scale(1);
+  }
+
+  .icons-container {
+    margin-block: 0;
+  }
+
+  .bottom-list {
+    margin: 0;
+    display: flex;
+    width: min(100%, 1000px) !important;
+  }
+
+  .bottom-list > div > li {
+    margin-bottom: 1.5rem;
+  }
+
+  .inbox {
+    align-self: start;
+    flex-basis: 30%;
+    text-align: right;
+  }
+
+  .copyright {
+    margin-top: 5em;
+    color: #74757a;
+  }
+
+  form > .form > input {
+    border: none !important;
   }
 }
